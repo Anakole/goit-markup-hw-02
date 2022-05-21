@@ -1,10 +1,11 @@
 body {
   font-family: 'Roboto';
+  color: var(--title-color);
+  background-color: var(--main-background);
 }
 
 .link {
   text-decoration: none;
-  cursor: pointer;
 }
 .list {
   list-style: none;
@@ -13,7 +14,9 @@ body {
 /*--------------COLORS-------------*/
 :root {
   --accent-color: #2196f3;
+  --accent-hover-color: #188ce8;
   --light-backgound: #f5f4fa;
+  --main-background: #ffffff;
   --light-text-color: #ffffff;
   --dark-background: #2f303a;
   --title-color: #212121;
@@ -76,6 +79,7 @@ body {
 }
 
 .hero-button {
+  font-family: inherit;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -88,11 +92,17 @@ body {
   color: var(--light-text-color);
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  background: var(--accent-hover-color);
+}
+
 /*--------------ABOUT-------------*/
 
 .about {
 }
-.about-top-title {
+.about-top-title,
+.portfolio-top-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -111,13 +121,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--title-color);
 }
 
 .about-text {
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
@@ -133,7 +141,6 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-color);
 }
 
 /*--------------TEAM-------------*/
@@ -147,10 +154,8 @@ body {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  color: var(--title-color);
 }
 .team-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -158,6 +163,7 @@ body {
 }
 
 .team-item {
+  background: var(--light-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -179,13 +185,67 @@ body {
 }
 
 .footer-link {
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--light-text-color);
 }
 
 .contacts {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
+
+/*--------------PORTFOLIO-------------*/
+
+.portfolio-button {
+  font-family: inherit;
+  background: var(--light-backgound);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  border: none;
+}
+
+.portfolio-button:active {
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: var(--light-text-color);
+}
+
+.portfolio-img-item {
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+/*------------------------------------*/
+
+.current {
+  color: var(--accent-color);
 }
